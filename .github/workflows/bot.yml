@@ -1,0 +1,27 @@
+name: Telegram Bot Daily Message
+
+on:
+  schedule:
+    - cron: '0 8 * * *'  # Tous les jours à 08h UTC (08h Abidjan)
+  workflow_dispatch:      # Permet de le lancer manuellement si besoin
+
+jobs:
+  send-message:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install node-telegram-bot-api directly
+        run: npm install node-telegram-bot-api
+
+      - name: Run bot script
+        run: node P_AllianceBot.js
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
