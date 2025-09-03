@@ -1,15 +1,15 @@
 const TelegramBot = require('node-telegram-bot-api');
 
-// Ton token Telegram (direct dans le code)
-const token = '7670053011:AAGDaonodhft3zyKGflLqe6tmy1hw-ZFARY';
+// Le token vient de GitHub Secrets
+const token = process.env.TELEGRAM_BOT_TOKEN;
 
-// Canal public ou ID privé
+// Ton canal (public ou privé)
 const canal = '@PariALLIANCE';
 
-// Créer le bot sans polling
+// Créer le bot sans polling (juste envoi)
 const bot = new TelegramBot(token, { polling: false });
 
-// Tableau de messages différents à faire tourner
+// Messages à alterner
 const messages = [
   "🔥 Salut la team Pari ALLIANCE ! 🔥\n\n⏰ Petit rappel matinal : les pronostics du jour sont dispo **depuis 01h**.\nFoncez dans l'application Pari Alliance pour booster vos gains ! 💸⚽️\nBonne chance 🍀🚀",
   "🚨 Hey parieurs ! Les pronostics sont déjà disponibles depuis 01h !\nNe perdez pas de temps, c’est le moment de miser avec Pari Alliance. 🎯💰",
@@ -17,11 +17,11 @@ const messages = [
   "⏰ C’est l’heure du rappel ! Les pronostics du jour vous attendent dans l'application Pari Alliance.\nPrenez l’avance dès maintenant et jouez malin ! 💪🍀",
 ];
 
-// Choix du message du jour (index selon le jour du mois)
+// Choisir le message du jour selon la date
 const day = new Date().getDate();
 const message = messages[day % messages.length];
 
-// Envoi du message
+// Envoyer le message
 bot.sendMessage(canal, message, { parse_mode: 'Markdown' })
   .then(() => console.log('✅ Message du jour envoyé avec succès !'))
   .catch(console.error);
