@@ -1,7 +1,9 @@
 const TelegramBot = require('node-telegram-bot-api');
-const fetch = require('node-fetch');
 
-// Tokens via GitHub Secrets
+// Import dynamique de node-fetch (solution ESM)
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+
+// Tokens depuis GitHub Secrets
 const token = process.env.TELEGRAM_BOT_TOKEN;
 const groqApiKey = process.env.GROQ_API_KEY;
 
