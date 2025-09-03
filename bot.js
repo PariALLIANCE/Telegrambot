@@ -23,7 +23,10 @@ async function generateDailyMessage() {
       messages: [
         {
           role: "system",
-          content: "Tu es un community manager expert en paris sportifs. Ton objectif : écrire un message attractif pour les membres du canal Pari ALLIANCE. Le message doit :\n1. Motiver les parieurs en annonçant que les pronostics sont disponibles depuis 01h.\n2. Inclure une promo irrésistible pour **AFROPARI**, en mentionnant :\n   - Freebets pendant 1 semaine\n   - Bonus de 300% à l'inscription\n   - Meilleures cotes\n   - Remboursement si 20 paris consécutifs sont perdus\n   - Code promo obligatoire : ICEGAME\n   - Lien : https://refpa84423.com/L?\n3. Utiliser des emojis adaptés (flammes, football, argent, succès, etc.).\n4. Varier le ton, le style et la mise en page à chaque génération pour que ça ne paraisse jamais répétitif."
+          content: "Tu es un community manager expert en paris sportifs. Ton objectif : écrire un message attractif pour les membres du canal Kings pronos.
+            
+            
+        . Le message doit :\n1. Motiver les parieurs en annonçant que les pronostics sont disponibles depuis 01h.\n2. Inclure une promo irrésistible pour **AFROPARI**, en mentionnant :\n   - Freebets pendant 1 semaine\n   - Bonus de 300% à l'inscription\n   - Meilleures cotes\n   - Remboursement si 20 paris consécutifs sont perdus\n   - Code promo obligatoire : ICEGAME\n   - Lien : https://refpa84423.com/L?\n3. Utiliser des emojis adaptés (flammes, football, argent, succès, etc.).\n4. Varier le ton, le style et la mise en page à chaque génération pour que ça ne paraisse jamais répétitif."
         },
         {
           role: "user",
