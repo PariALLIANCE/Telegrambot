@@ -1,27 +1,53 @@
 const TelegramBot = require('node-telegram-bot-api');
+const fetch = require('node-fetch');
 
-// Le token vient de GitHub Secrets
+// Tokens via GitHub Secrets
 const token = process.env.TELEGRAM_BOT_TOKEN;
+const groqApiKey = process.env.GROQ_API_KEY;
 
-// Ton canal (public ou privé)
+// Canal Telegram
 const canal = '@PariALLIANCE';
 
-// Créer le bot sans polling (juste envoi)
-const bot = new TelegramBot(token, { polling: false });
+// Fonction qui génère un message complet (motivation + promo AFROPARI)
+async function generateDailyMessage() {
+  const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${groqApiKey}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      model: "mixtral-8x7b-32768",
+      messages: [
+        {
+          role: "system",
+          content: "Tu es un community manager expert en paris sportifs. Ton objectif : écrire un message attractif pour les membres du canal Pari ALLIANCE. Le message doit :\n1. Motiver les parieurs en annonçant que les pronostics sont disponibles depuis 01h.\n2. Inclure une promo irrésistible pour **AFROPARI**, en mentionnant :\n   - Freebets pendant 1 semaine\n   - Bonus de 300% à l'inscription\n   - Meilleures cotes\n   - Remboursement si 20 paris consécutifs sont perdus\n   - Code promo obligatoire : ICEGAME\n   - Lien : https://refpa84423.com/L?\n3. Utiliser des emojis adaptés (flammes, football, argent, succès, etc.).\n4. Varier le ton, le style et la mise en page à chaque génération pour que ça ne paraisse jamais répétitif."
+        },
+        {
+          role: "user",
+          content: "Génère le message du jour complet."
+        }
+      ],
+      temperature: 0.9,
+      max_tokens: 300
+    })
+  });
 
-// Messages à alterner
-const messages = [
-  "🔥 Salut la team Pari ALLIANCE ! 🔥\n\n⏰ Petit rappel matinal : les pronostics du jour sont dispo **depuis 01h**.\nFoncez dans l'application Pari Alliance pour booster vos gains ! 💸⚽️\nBonne chance 🍀🚀",
-  "🚨 Hey parieurs ! Les pronostics sont déjà disponibles depuis 01h !\nNe perdez pas de temps, c’est le moment de miser avec Pari Alliance. 🎯💰",
-  "🌟 Nouvelle journée, nouvelle chance ! Les pronostics sont en ligne depuis 01h.\nRejoignez-nous sur l'app Pari Alliance et faites vibrer vos paris ! ⚽🔥",
-  "⏰ C’est l’heure du rappel ! Les pronostics du jour vous attendent dans l'application Pari Alliance.\nPrenez l’avance dès maintenant et jouez malin ! 💪🍀",
-];
+  const data = await response.json();
+  return data.choices[0].message.content.trim();
+}
 
-// Choisir le message du jour selon la date
-const day = new Date().getDate();
-const message = messages[day % messages.length];
+(async () => {
+  try {
+    // Générer le message du jour
+    const finalMessage = await generateDailyMessage();
 
-// Envoyer le message
-bot.sendMessage(canal, message, { parse_mode: 'Markdown' })
-  .then(() => console.log('✅ Message du jour envoyé avec succès !'))
-  .catch(console.error);
+    // Envoyer sur Telegram
+    const bot = new TelegramBot(token, { polling: false });
+    await bot.sendMessage(canal, finalMessage, { parse_mode: "Markdown" });
+
+    console.log("✅ Message IA (motivation + promo AFROPARI) envoyé !");
+  } catch (err) {
+    console.error("❌ Erreur :", err);
+  }
+})();
