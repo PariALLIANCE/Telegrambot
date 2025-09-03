@@ -19,7 +19,7 @@ async function generateDailyMessage() {
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      model: "mixtral-8x7b-32768",
+      model: "meta-llama/llama-4-maverick-17b-128e-instruct",
       messages: [
         {
           role: "system",
