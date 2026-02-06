@@ -1,57 +1,98 @@
-name: NHL Games Scraper
+import requests
+from bs4 import BeautifulSoup
+from datetime import datetime, timedelta
+import json
+import os
+import re
 
-on:
-  schedule:
-    # Exécute tous les jours à 6h UTC (après les matchs de la veille)
-    - cron: '0 6 * * *'
-  workflow_dispatch: # Permet l'exécution manuelle
-  push:
-    branches:
-      - main
-    paths:
-      - 'test.py'
-      - '.github/workflows/nhl-scraper.yml'
+# ================= CONFIG =================
+BASE_URL = "https://www.espn.com/nhl/schedule/_/date/"
+OUTPUT_FILE = "data/hockey/played_games_last_two_days.json"
+HEADERS = {"User-Agent": "Mozilla/5.0"}
 
-jobs:
-  scrape-games:
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-      
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-      
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests beautifulsoup4
-      
-      - name: Run scraper
-        run: python test.py
-      
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add data/hockey/played_games_last_two_days.json
-          git diff --staged --quiet || git commit -m "Update NHL games data - $(date +'%Y-%m-%d %H:%M:%S')"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-Sauvegardez ce fichier sous : .github/workflows/nhl-scraper.yml
-Configuration supplémentaire
-Si vous utilisez un fichier requirements.txt, créez-le :
-requests==2.31.0
-beautifulsoup4==4.12.3
-Et modifiez l'étape d'installation :
-- name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+# ================= UTILS =================
+def extract_team_from_href(href):
+    """
+    /nhl/team/_/name/bos/boston-bruins
+    -> Boston Bruins, bos
+    """
+    parts = href.split("/")
+    short = parts[-2]
+    full_name = parts[-1].replace("-", " ").title()
+    return full_name, short
+
+
+def build_logo_url(short):
+    return f"https://a.espncdn.com/i/teamlogos/nhl/500/{short}.png"
+
+
+def is_played_match(text):
+    """
+    Détecte un score : 'MTL 4, BUF 2' ou 'TOR 3, VAN 2 (SO)'
+    """
+    return bool(re.search(r"\d+\s*,\s*\w+\s*\d+", text))
+
+
+# ================= MAIN =================
+def get_played_games_last_two_days():
+    results = []
+    today = datetime.utcnow().date()
+
+    for delta in [1, 2]:
+        day = today - timedelta(days=delta)
+        date_str = day.strftime("%Y%m%d")
+        url = BASE_URL + date_str
+
+        response = requests.get(url, headers=HEADERS)
+        if response.status_code != 200:
+            continue
+
+        soup = BeautifulSoup(response.text, "html.parser")
+        rows = soup.select("tbody tr")
+
+        for row in rows:
+            score_link = row.select_one("td a[href*='/nhl/game/_/gameId']")
+            if not score_link:
+                continue
+
+            score_text = score_link.get_text(strip=True)
+
+            if not is_played_match(score_text):
+                continue  # pas encore joué
+
+            teams = row.select("a[href*='/nhl/team/_/name/']")
+            if len(teams) < 2:
+                continue
+
+            away_name, away_short = extract_team_from_href(teams[0]["href"])
+            home_name, home_short = extract_team_from_href(teams[1]["href"])
+
+            results.append({
+                "date": day.isoformat(),
+                "score": score_text,
+                "away_team": {
+                    "name": away_name,
+                    "short": away_short,
+                    "logo": build_logo_url(away_short)
+                },
+                "home_team": {
+                    "name": home_name,
+                    "short": home_short,
+                    "logo": build_logo_url(home_short)
+                }
+            })
+
+    return results
+
+
+# ================= SAVE =================
+def save_json(data):
+    os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+
+if __name__ == "__main__":
+    games = get_played_games_last_two_days()
+    save_json(games)
+    print(f"{len(games)} matchs joués sauvegardés dans {OUTPUT_FILE}")
