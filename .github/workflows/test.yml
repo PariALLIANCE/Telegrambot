@@ -1,36 +1,52 @@
-name: NHL Played Games
+name: Run NHL Scraper
 
-# Quand déclencher le workflow
 on:
   schedule:
-    - cron: '0 8 * * *' # tous les jours à 08:00 UTC
-  workflow_dispatch: # permet de lancer manuellement depuis GitHub
+    - cron: "15 3 * * *"
+  workflow_dispatch:
 
 jobs:
-  fetch_games:
+  run-script:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout du dépôt
       - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/checkout@v4
         with:
-          python-version: '3.11'
+          fetch-depth: 0   # IMPORTANT pour le rebase
 
+      # 2️⃣ Setup Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      # 3️⃣ Installer les dépendances
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install requests beautifulsoup4
 
-      - name: Run NHL script
-        run: python test.py
-
-      - name: Commit and push JSON changes
+      # 4️⃣ 🔥 Rebase AVANT toute écriture (structure inchangée)
+      - name: Sync with remote main
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/hockey/played_games_last_two_days.json
-          git diff --cached --quiet || git commit -m "Update NHL games JSON"
-          git push
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main || true
+
+      # 5️⃣ Exécuter le script
+      - name: Run script
+        run: |
+          python test.py
+
+      # 6️⃣ Commit & push uniquement s’il y a des changements
+      - name: Commit and push results
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git add data/
+            git commit -m "Update played NHL games (last two days)"
+            git push origin main
+          else
+            echo "Aucun changement à commit"
+          fi
