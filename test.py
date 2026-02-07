@@ -60,12 +60,25 @@ def get_played_games_last_two_days():
             if not is_played_match(score_text):
                 continue  # pas encore joué
 
-            teams = row.select("a[href*='/nhl/team/_/name/']")
-            if len(teams) < 2:
+            # Récupérer toutes les cellules <td> de la ligne
+            cells = row.select("td")
+
+            # La première cellule contient l'équipe à l'extérieur
+            # La deuxième cellule contient l'équipe à domicile
+            away_team_link = None
+            home_team_link = None
+
+            if len(cells) >= 2:
+                # Équipe extérieure dans la première cellule
+                away_team_link = cells[0].select_one("a[href*='/nhl/team/_/name/']")
+                # Équipe domicile dans la deuxième cellule
+                home_team_link = cells[1].select_one("a[href*='/nhl/team/_/name/']")
+
+            if not away_team_link or not home_team_link:
                 continue
 
-            away_name, away_short = extract_team_from_href(teams[0]["href"])
-            home_name, home_short = extract_team_from_href(teams[1]["href"])
+            away_name, away_short = extract_team_from_href(away_team_link["href"])
+            home_name, home_short = extract_team_from_href(home_team_link["href"])
 
             results.append({
                 "date": day.isoformat(),
