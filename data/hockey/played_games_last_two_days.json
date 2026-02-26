@@ -1,1 +1,142 @@
-[]
+[
+  {
+    "date": "2026-02-25",
+    "score": "BUF 2, NJ 1",
+    "away_team": {
+      "name": "Buffalo Sabres",
+      "short": "buf",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/buf.png"
+    },
+    "home_team": {
+      "name": "New Jersey Devils",
+      "short": "nj",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png"
+    }
+  },
+  {
+    "date": "2026-02-25",
+    "score": "WSH 3, PHI 1",
+    "away_team": {
+      "name": "Philadelphia Flyers",
+      "short": "phi",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/phi.png"
+    },
+    "home_team": {
+      "name": "Washington Capitals",
+      "short": "wsh",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/wsh.png"
+    }
+  },
+  {
+    "date": "2026-02-25",
+    "score": "TB 4, TOR 2",
+    "away_team": {
+      "name": "Toronto Maple Leafs",
+      "short": "tor",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/tor.png"
+    },
+    "home_team": {
+      "name": "Tampa Bay Lightning",
+      "short": "tb",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/tb.png"
+    }
+  },
+  {
+    "date": "2026-02-25",
+    "score": "DAL 4, SEA 1",
+    "away_team": {
+      "name": "Seattle Kraken",
+      "short": "sea",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/sea.png"
+    },
+    "home_team": {
+      "name": "Dallas Stars",
+      "short": "dal",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/dal.png"
+    }
+  },
+  {
+    "date": "2026-02-25",
+    "score": "COL 4, UTA 2",
+    "away_team": {
+      "name": "Colorado Avalanche",
+      "short": "col",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/col.png"
+    },
+    "home_team": {
+      "name": "Utah Mammoth",
+      "short": "utah",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/utah.png"
+    }
+  },
+  {
+    "date": "2026-02-24",
+    "score": "BUF 2, NJ 1",
+    "away_team": {
+      "name": "Buffalo Sabres",
+      "short": "buf",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/buf.png"
+    },
+    "home_team": {
+      "name": "New Jersey Devils",
+      "short": "nj",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png"
+    }
+  },
+  {
+    "date": "2026-02-24",
+    "score": "WSH 3, PHI 1",
+    "away_team": {
+      "name": "Philadelphia Flyers",
+      "short": "phi",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/phi.png"
+    },
+    "home_team": {
+      "name": "Washington Capitals",
+      "short": "wsh",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/wsh.png"
+    }
+  },
+  {
+    "date": "2026-02-24",
+    "score": "TB 4, TOR 2",
+    "away_team": {
+      "name": "Toronto Maple Leafs",
+      "short": "tor",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/tor.png"
+    },
+    "home_team": {
+      "name": "Tampa Bay Lightning",
+      "short": "tb",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/tb.png"
+    }
+  },
+  {
+    "date": "2026-02-24",
+    "score": "DAL 4, SEA 1",
+    "away_team": {
+      "name": "Seattle Kraken",
+      "short": "sea",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/sea.png"
+    },
+    "home_team": {
+      "name": "Dallas Stars",
+      "short": "dal",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/dal.png"
+    }
+  },
+  {
+    "date": "2026-02-24",
+    "score": "COL 4, UTA 2",
+    "away_team": {
+      "name": "Colorado Avalanche",
+      "short": "col",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/col.png"
+    },
+    "home_team": {
+      "name": "Utah Mammoth",
+      "short": "utah",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/utah.png"
+    }
+  }
+]
