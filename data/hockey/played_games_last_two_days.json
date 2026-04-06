@@ -1,63 +1,21 @@
 [
   {
-    "date": "2026-04-04",
-    "score": "NYR 4, DET 1",
-    "away_team": {
-      "name": "Detroit Red Wings",
-      "short": "det",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/det.png"
-    },
-    "home_team": {
-      "name": "New York Rangers",
-      "short": "nyr",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nyr.png"
-    }
-  },
-  {
-    "date": "2026-04-04",
-    "score": "MIN 4, OTT 1",
+    "date": "2026-04-05",
+    "score": "MIN 5, DET 4",
     "away_team": {
       "name": "Minnesota Wild",
       "short": "min",
       "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/min.png"
     },
     "home_team": {
-      "name": "Ottawa Senators",
-      "short": "ott",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/ott.png"
+      "name": "Detroit Red Wings",
+      "short": "det",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/det.png"
     }
   },
   {
-    "date": "2026-04-04",
-    "score": "COL 2, DAL 0",
-    "away_team": {
-      "name": "Colorado Avalanche",
-      "short": "col",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/col.png"
-    },
-    "home_team": {
-      "name": "Dallas Stars",
-      "short": "dal",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/dal.png"
-    }
-  },
-  {
-    "date": "2026-04-04",
-    "score": "TB 3, BOS 1",
-    "away_team": {
-      "name": "Boston Bruins",
-      "short": "bos",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/bos.png"
-    },
-    "home_team": {
-      "name": "Tampa Bay Lightning",
-      "short": "tb",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/tb.png"
-    }
-  },
-  {
-    "date": "2026-04-04",
-    "score": "PIT 9, FLA 4",
+    "date": "2026-04-05",
+    "score": "PIT 5, FLA 2",
     "away_team": {
       "name": "Florida Panthers",
       "short": "fla",
@@ -70,175 +28,77 @@
     }
   },
   {
-    "date": "2026-04-04",
-    "score": "MTL 4, NJ 3 (SO)",
+    "date": "2026-04-05",
+    "score": "PHI 2, BOS 1 (OT)",
     "away_team": {
-      "name": "Montreal Canadiens",
-      "short": "mtl",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png"
+      "name": "Boston Bruins",
+      "short": "bos",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/bos.png"
     },
     "home_team": {
-      "name": "New Jersey Devils",
-      "short": "nj",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png"
-    }
-  },
-  {
-    "date": "2026-04-04",
-    "score": "WSH 6, BUF 2",
-    "away_team": {
-      "name": "Buffalo Sabres",
-      "short": "buf",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/buf.png"
-    },
-    "home_team": {
-      "name": "Washington Capitals",
-      "short": "wsh",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/wsh.png"
-    }
-  },
-  {
-    "date": "2026-04-04",
-    "score": "CAR 4, NYI 3",
-    "away_team": {
-      "name": "New York Islanders",
-      "short": "nyi",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nyi.png"
-    },
-    "home_team": {
-      "name": "Carolina Hurricanes",
-      "short": "car",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/car.png"
-    }
-  },
-  {
-    "date": "2026-04-04",
-    "score": "WPG 2, CBJ 1",
-    "away_team": {
-      "name": "Winnipeg Jets",
-      "short": "wpg",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/wpg.png"
-    },
-    "home_team": {
-      "name": "Columbus Blue Jackets",
-      "short": "cbj",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/cbj.png"
-    }
-  },
-  {
-    "date": "2026-04-04",
-    "score": "UTA 7, VAN 4",
-    "away_team": {
-      "name": "Utah Mammoth",
-      "short": "utah",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/utah.png"
-    },
-    "home_team": {
-      "name": "Vancouver Canucks",
-      "short": "van",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/van.png"
-    }
-  },
-  {
-    "date": "2026-04-04",
-    "score": "LA 7, TOR 6 (OT)",
-    "away_team": {
-      "name": "Toronto Maple Leafs",
-      "short": "tor",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/tor.png"
-    },
-    "home_team": {
-      "name": "Los Angeles Kings",
-      "short": "la",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/la.png"
-    }
-  },
-  {
-    "date": "2026-04-04",
-    "score": "VGK 5, EDM 1",
-    "away_team": {
-      "name": "Vegas Golden Knights",
-      "short": "vgk",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/vgk.png"
-    },
-    "home_team": {
-      "name": "Edmonton Oilers",
-      "short": "edm",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/edm.png"
-    }
-  },
-  {
-    "date": "2026-04-04",
-    "score": "CGY 5, ANA 3",
-    "away_team": {
-      "name": "Calgary Flames",
-      "short": "cgy",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/cgy.png"
-    },
-    "home_team": {
-      "name": "Anaheim Ducks",
-      "short": "ana",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png"
-    }
-  },
-  {
-    "date": "2026-04-04",
-    "score": "NSH 6, SJ 3",
-    "away_team": {
-      "name": "Nashville Predators",
-      "short": "nsh",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nsh.png"
-    },
-    "home_team": {
-      "name": "San Jose Sharks",
-      "short": "sj",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/sj.png"
-    }
-  },
-  {
-    "date": "2026-04-04",
-    "score": "CHI 4, SEA 2",
-    "away_team": {
-      "name": "Chicago Blackhawks",
-      "short": "chi",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/chi.png"
-    },
-    "home_team": {
-      "name": "Seattle Kraken",
-      "short": "sea",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/sea.png"
-    }
-  },
-  {
-    "date": "2026-04-03",
-    "score": "PHI 4, NYI 1",
-    "away_team": {
       "name": "Philadelphia Flyers",
       "short": "phi",
       "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/phi.png"
-    },
-    "home_team": {
-      "name": "New York Islanders",
-      "short": "nyi",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nyi.png"
     }
   },
   {
-    "date": "2026-04-03",
-    "score": "STL 6, ANA 2",
+    "date": "2026-04-05",
+    "score": "OTT 6, CAR 3",
+    "away_team": {
+      "name": "Carolina Hurricanes",
+      "short": "car",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/car.png"
+    },
+    "home_team": {
+      "name": "Ottawa Senators",
+      "short": "ott",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/ott.png"
+    }
+  },
+  {
+    "date": "2026-04-05",
+    "score": "NJ 3, MTL 0",
+    "away_team": {
+      "name": "New Jersey Devils",
+      "short": "nj",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png"
+    },
+    "home_team": {
+      "name": "Montreal Canadiens",
+      "short": "mtl",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png"
+    }
+  },
+  {
+    "date": "2026-04-05",
+    "score": "NYR 8, WSH 1",
+    "away_team": {
+      "name": "Washington Capitals",
+      "short": "wsh",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/wsh.png"
+    },
+    "home_team": {
+      "name": "New York Rangers",
+      "short": "nyr",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nyr.png"
+    }
+  },
+  {
+    "date": "2026-04-05",
+    "score": "STL 3, COL 2",
     "away_team": {
       "name": "St Louis Blues",
       "short": "stl",
       "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/stl.png"
     },
     "home_team": {
-      "name": "Anaheim Ducks",
-      "short": "ana",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png"
+      "name": "Colorado Avalanche",
+      "short": "col",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/col.png"
     }
   },
   {
-    "date": "2026-04-03",
+    "date": "2026-04-04",
     "score": "NYR 4, DET 1",
     "away_team": {
       "name": "Detroit Red Wings",
@@ -252,7 +112,7 @@
     }
   },
   {
-    "date": "2026-04-03",
+    "date": "2026-04-04",
     "score": "MIN 4, OTT 1",
     "away_team": {
       "name": "Minnesota Wild",
@@ -266,7 +126,7 @@
     }
   },
   {
-    "date": "2026-04-03",
+    "date": "2026-04-04",
     "score": "COL 2, DAL 0",
     "away_team": {
       "name": "Colorado Avalanche",
@@ -280,7 +140,7 @@
     }
   },
   {
-    "date": "2026-04-03",
+    "date": "2026-04-04",
     "score": "TB 3, BOS 1",
     "away_team": {
       "name": "Boston Bruins",
@@ -294,7 +154,7 @@
     }
   },
   {
-    "date": "2026-04-03",
+    "date": "2026-04-04",
     "score": "PIT 9, FLA 4",
     "away_team": {
       "name": "Florida Panthers",
@@ -308,7 +168,7 @@
     }
   },
   {
-    "date": "2026-04-03",
+    "date": "2026-04-04",
     "score": "MTL 4, NJ 3 (SO)",
     "away_team": {
       "name": "Montreal Canadiens",
@@ -322,7 +182,7 @@
     }
   },
   {
-    "date": "2026-04-03",
+    "date": "2026-04-04",
     "score": "WSH 6, BUF 2",
     "away_team": {
       "name": "Buffalo Sabres",
@@ -336,7 +196,7 @@
     }
   },
   {
-    "date": "2026-04-03",
+    "date": "2026-04-04",
     "score": "CAR 4, NYI 3",
     "away_team": {
       "name": "New York Islanders",
@@ -350,7 +210,7 @@
     }
   },
   {
-    "date": "2026-04-03",
+    "date": "2026-04-04",
     "score": "WPG 2, CBJ 1",
     "away_team": {
       "name": "Winnipeg Jets",
@@ -364,7 +224,7 @@
     }
   },
   {
-    "date": "2026-04-03",
+    "date": "2026-04-04",
     "score": "UTA 7, VAN 4",
     "away_team": {
       "name": "Utah Mammoth",
@@ -378,7 +238,7 @@
     }
   },
   {
-    "date": "2026-04-03",
+    "date": "2026-04-04",
     "score": "LA 7, TOR 6 (OT)",
     "away_team": {
       "name": "Toronto Maple Leafs",
@@ -392,7 +252,7 @@
     }
   },
   {
-    "date": "2026-04-03",
+    "date": "2026-04-04",
     "score": "VGK 5, EDM 1",
     "away_team": {
       "name": "Vegas Golden Knights",
@@ -406,7 +266,7 @@
     }
   },
   {
-    "date": "2026-04-03",
+    "date": "2026-04-04",
     "score": "CGY 5, ANA 3",
     "away_team": {
       "name": "Calgary Flames",
@@ -420,7 +280,7 @@
     }
   },
   {
-    "date": "2026-04-03",
+    "date": "2026-04-04",
     "score": "NSH 6, SJ 3",
     "away_team": {
       "name": "Nashville Predators",
@@ -434,7 +294,7 @@
     }
   },
   {
-    "date": "2026-04-03",
+    "date": "2026-04-04",
     "score": "CHI 4, SEA 2",
     "away_team": {
       "name": "Chicago Blackhawks",
@@ -445,6 +305,104 @@
       "name": "Seattle Kraken",
       "short": "sea",
       "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/sea.png"
+    }
+  },
+  {
+    "date": "2026-04-04",
+    "score": "MIN 5, DET 4",
+    "away_team": {
+      "name": "Minnesota Wild",
+      "short": "min",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/min.png"
+    },
+    "home_team": {
+      "name": "Detroit Red Wings",
+      "short": "det",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/det.png"
+    }
+  },
+  {
+    "date": "2026-04-04",
+    "score": "PIT 5, FLA 2",
+    "away_team": {
+      "name": "Florida Panthers",
+      "short": "fla",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/fla.png"
+    },
+    "home_team": {
+      "name": "Pittsburgh Penguins",
+      "short": "pit",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/pit.png"
+    }
+  },
+  {
+    "date": "2026-04-04",
+    "score": "PHI 2, BOS 1 (OT)",
+    "away_team": {
+      "name": "Boston Bruins",
+      "short": "bos",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/bos.png"
+    },
+    "home_team": {
+      "name": "Philadelphia Flyers",
+      "short": "phi",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/phi.png"
+    }
+  },
+  {
+    "date": "2026-04-04",
+    "score": "OTT 6, CAR 3",
+    "away_team": {
+      "name": "Carolina Hurricanes",
+      "short": "car",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/car.png"
+    },
+    "home_team": {
+      "name": "Ottawa Senators",
+      "short": "ott",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/ott.png"
+    }
+  },
+  {
+    "date": "2026-04-04",
+    "score": "NJ 3, MTL 0",
+    "away_team": {
+      "name": "New Jersey Devils",
+      "short": "nj",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png"
+    },
+    "home_team": {
+      "name": "Montreal Canadiens",
+      "short": "mtl",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png"
+    }
+  },
+  {
+    "date": "2026-04-04",
+    "score": "NYR 8, WSH 1",
+    "away_team": {
+      "name": "Washington Capitals",
+      "short": "wsh",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/wsh.png"
+    },
+    "home_team": {
+      "name": "New York Rangers",
+      "short": "nyr",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nyr.png"
+    }
+  },
+  {
+    "date": "2026-04-04",
+    "score": "STL 3, COL 2",
+    "away_team": {
+      "name": "St Louis Blues",
+      "short": "stl",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/stl.png"
+    },
+    "home_team": {
+      "name": "Colorado Avalanche",
+      "short": "col",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/col.png"
     }
   }
 ]
