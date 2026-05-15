@@ -1,5 +1,33 @@
 [
   {
+    "date": "2026-05-14",
+    "score": "MTL 6, BUF 3",
+    "away_team": {
+      "name": "Montreal Canadiens",
+      "short": "mtl",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png"
+    },
+    "home_team": {
+      "name": "Buffalo Sabres",
+      "short": "buf",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/buf.png"
+    }
+  },
+  {
+    "date": "2026-05-14",
+    "score": "VGK 5, ANA 1",
+    "away_team": {
+      "name": "Vegas Golden Knights",
+      "short": "vgk",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/vgk.png"
+    },
+    "home_team": {
+      "name": "Anaheim Ducks",
+      "short": "ana",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png"
+    }
+  },
+  {
     "date": "2026-05-13",
     "score": "COL 4, MIN 3 (OT)",
     "away_team": {
@@ -14,45 +42,31 @@
     }
   },
   {
-    "date": "2026-05-12",
-    "score": "BUF 3, MTL 2",
+    "date": "2026-05-13",
+    "score": "MTL 6, BUF 3",
     "away_team": {
-      "name": "Buffalo Sabres",
-      "short": "buf",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/buf.png"
-    },
-    "home_team": {
       "name": "Montreal Canadiens",
       "short": "mtl",
       "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png"
+    },
+    "home_team": {
+      "name": "Buffalo Sabres",
+      "short": "buf",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/buf.png"
     }
   },
   {
-    "date": "2026-05-12",
-    "score": "VGK 3, ANA 2 (OT)",
+    "date": "2026-05-13",
+    "score": "VGK 5, ANA 1",
     "away_team": {
-      "name": "Anaheim Ducks",
-      "short": "ana",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png"
-    },
-    "home_team": {
       "name": "Vegas Golden Knights",
       "short": "vgk",
       "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/vgk.png"
-    }
-  },
-  {
-    "date": "2026-05-12",
-    "score": "COL 4, MIN 3 (OT)",
-    "away_team": {
-      "name": "Minnesota Wild",
-      "short": "min",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/min.png"
     },
     "home_team": {
-      "name": "Colorado Avalanche",
-      "short": "col",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/col.png"
+      "name": "Anaheim Ducks",
+      "short": "ana",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png"
     }
   }
 ]
